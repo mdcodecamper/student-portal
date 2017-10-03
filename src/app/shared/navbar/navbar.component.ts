@@ -3,6 +3,8 @@ import { ROUTES } from '../../sidebar/sidebar.component';
 import {Location, LocationStrategy, PathLocationStrategy} from '@angular/common';
 import { AuthService } from '../../service/auth.service';
 import { AngularFireAuth } from 'angularfire2/auth';
+import * as firebase from 'firebase';
+import { Observable } from 'rxjs/Observable';
 
 @Component({
     // moduleId: module.id,
@@ -16,9 +18,17 @@ export class NavbarComponent implements OnInit{
     private toggleButton: any;
     private sidebarVisible: boolean;
 
-    constructor(location: Location,  private element: ElementRef, private afAuth: AuthService, private af:AngularFireAuth) {
-      this.location = location;
+    user$: Observable<firebase.User>;
+
+    constructor(location: Location,  
+                private element: ElementRef, 
+                private afAuth: AuthService, 
+                private af:AngularFireAuth) {
+          this.location = location;
           this.sidebarVisible = false;
+    
+          this.user$ = af.authState;
+         
     }
 
     ngOnInit(){
