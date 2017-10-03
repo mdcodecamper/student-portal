@@ -5,8 +5,8 @@ import { Routes, RouterModule } from '@angular/router';
 
 import { HomeComponent } from './home/home.component';
 import { UserComponent } from './user/user.component';
-import { StudentListComponent } from './tables/tables.component';
-import { AddNewStudentComponent } from './typography/typography.component';
+import { StudentListComponent } from './student-list/student-list.component';
+import { AddNewStudentComponent } from './add-new-student/add-new-student.component';
 import { IconsComponent } from './icons/icons.component';
 import { MapsComponent } from './maps/maps.component';
 import { NotificationsComponent } from './notifications/notifications.component';

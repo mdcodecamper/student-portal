@@ -7,10 +7,10 @@ declare interface TableData {
 
 @Component({
   selector: 'app-tables',
-  templateUrl: './tables.component.html',
-  styleUrls: ['./tables.component.css']
+  templateUrl: './student-list.component.html',
+  styleUrls: ['./student-list.component.css']
 })
-export class TablesComponent implements OnInit {
+export class StudentListComponent implements OnInit {
     public tableData1: TableData;
     public tableData2: TableData;
 

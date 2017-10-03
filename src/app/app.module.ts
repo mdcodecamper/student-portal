@@ -19,8 +19,8 @@ import { AppComponent } from './app.component';
 
 import { HomeComponent } from './home/home.component';
 import { UserComponent } from './user/user.component';
-import { TablesComponent } from './tables/tables.component';
-import { TypographyComponent } from './typography/typography.component';
+import { StudentListComponent } from './student-list/student-list.component';
+import { AddNewStudentComponent } from './add-new-student/add-new-student.component';
 import { IconsComponent } from './icons/icons.component';
 import { MapsComponent } from './maps/maps.component';
 import { NotificationsComponent } from './notifications/notifications.component';
@@ -35,8 +35,8 @@ import { AngularFireAuth } from 'angularfire2/auth';
     AppComponent,
     HomeComponent,
     UserComponent,
-    TablesComponent,
-    TypographyComponent,
+    StudentListComponent,
+    AddNewStudentComponent,
     IconsComponent,
     MapsComponent,
     NotificationsComponent,
