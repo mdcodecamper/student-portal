@@ -11,45 +11,23 @@
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <label>First Name</label>
-                                        <input type="text" class="form-control" placeholder="Company" value="Mike">
+                                        <label>First Name*</label>
+                                        <input type="text" class="form-control" placeholder="Company" required>
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <label>Last Name</label>
-                                        <input type="text" class="form-control" placeholder="Last Name" value="Andrew">
+                                        <label>Last Name*</label>
+                                        <input type="text" class="form-control" placeholder="Last Name" required>
                                     </div>
                                 </div>
                             </div>
-                            <div class="row">
-                                <div class="col-md-5">
-                                    <div class="form-group">
-                                        <label>Company (disabled)</label>
-                                        <input type="text" class="form-control" disabled placeholder="Company" value="Creative Code Inc.">
-                                    </div>
-                                </div>
-                                <div class="col-md-3">
-                                    <div class="form-group">
-                                        <label>Username</label>
-                                        <input type="text" class="form-control" placeholder="Username" value="michael23">
-                                    </div>
-                                </div>
-                                <div class="col-md-4">
-                                    <div class="form-group">
-                                        <label for="exampleInputEmail1">Email address</label>
-                                        <input type="email" class="form-control" placeholder="Email">
-                                    </div>
-                                </div>
-                            </div>
-
-
 
                             <div class="row">
                                 <div class="col-md-12">
                                     <div class="form-group">
                                         <label>Address</label>
-                                        <input type="text" class="form-control" placeholder="Home Address" value="Bld Mihail Kogalniceanu, nr. 8 Bl 1, Sc 1, Ap 09">
+                                        <input type="text" class="form-control" placeholder="Home Address">
                                     </div>
                                 </div>
                             </div>
@@ -58,13 +36,13 @@
                                 <div class="col-md-4">
                                     <div class="form-group">
                                         <label>City</label>
-                                        <input type="text" class="form-control" placeholder="City" value="Mike">
+                                        <input type="text" class="form-control" placeholder="City">
                                     </div>
                                 </div>
                                 <div class="col-md-4">
                                     <div class="form-group">
-                                        <label>Country</label>
-                                        <input type="text" class="form-control" placeholder="Country" value="Andrew">
+                                        <label>State</label>
+                                        <input type="text" class="form-control" placeholder="State">
                                     </div>
                                 </div>
                                 <div class="col-md-4">
@@ -78,40 +56,88 @@
                             <div class="row">
                                 <div class="col-md-12">
                                     <div class="form-group">
-                                        <label>About Me</label>
-                                        <textarea rows="5" class="form-control" placeholder="Here can be your description" value="Mike">Lamborghini Mercy, Your chick she so thirsty, I'm in that two seat Lambo.</textarea>
+                                        <label>Email*</label>
+                                        <input type="email" class="form-control" placeholder="Email">
                                     </div>
                                 </div>
                             </div>
-                            <button type="submit" class="btn btn-info btn-fill pull-right">Update Profile</button>
+
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <label for="education">Highest Level of Education*</label>
+                                        <select class="form-control" id="education">
+                                          <option>Select an Education Level</option>
+                                          <option value="masters">Masters or Professional </option>
+                                          <option value="bs">Bachelor Degree </option>
+                                          <option value="college">College Degree </option>
+                                          <option value="diploma">Diploma Degree </option>
+                                          <option value="others">Others</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <hr>
+
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                        <label>Username*</label>
+                                        <input type="text" class="form-control" placeholder="Username" name="userName" required>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                        <label for="password">Password*</label>
+                                        <input type="password" class="form-control" placeholder="Password" name="password" required>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                        <label for="confirm">Confirm Password*</label>
+                                        <input type="password" class="form-control" placeholder="Re-Enter Password" name="confirm" required>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <label for="program">Program of Study*</label>
+                                        <select class="form-control" id="program">
+                                          <option value="qa-automation">QA Automation Engineering</option>
+                                          <option value="qa-manual">Manual Software Testing</option>
+                                          <option value="qa-performance">Software Performance Engineering</option>
+                                          <option value=".net">.Net Development</option>
+                                          <option value="front-end">Front End Development</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <label>Image Url*</label>
+                                        <input type="text" class="form-control" placeholder="Image Url">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <button type="submit" class="btn btn-info btn-fill pull-right">Add Student</button>
                             <div class="clearfix"></div>
                         </form>
                     </div>
                 </div>
             </div>
-            <div class="col-md-4">
-                <div class="card card-user">
-                    <div class="image">
-                        <img src="https://ununsplash.imgix.net/photo-1431578500526-4d9613015464?fit=crop&fm=jpg&h=300&q=75&w=400" alt="..." />
-                    </div>
-                    <div class="content">
-                        <div class="author">
-                            <a href="#">
-                                <img class="avatar border-gray" src="assets/img/faces/face-3.jpg" alt="..." />
 
-                                <h4 class="title">Mike Andrew<br />
-                                    <small>michael24</small>
-                                </h4>
-                            </a>
-                        </div>
-                        <p class="description text-center"> "Lamborghini Mercy <br> Your chick she so thirsty <br> I'm in that two seat Lambo"
-                        </p>
-                    </div>
-                    <hr>
-                    <div class="text-center">
-                        <button href="#" class="btn btn-simple"><i class="fa fa-facebook-square"></i></button>
-                        <button href="#" class="btn btn-simple"><i class="fa fa-twitter"></i></button>
-                        <button href="#" class="btn btn-simple"><i class="fa fa-google-plus-square"></i></button>
+
+
+            <div class="col-md-4">
+                <div class="card">
+                    <img class="card-img-top" src="https://ununsplash.imgix.net/photo-1431578500526-4d9613015464?fit=crop&fm=jpg&h=300&q=75&w=400" width="295px" alt="Card image cap">
+                    <div class="card-body">
+                        <h4 class="card-title">Full Name</h4>
                     </div>
                 </div>
             </div>
