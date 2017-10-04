@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-typography',
+  // tslint:disable-next-line:component-selector
+  selector: 'add-new-student',
   templateUrl: './add-new-student.component.html',
   styleUrls: ['./add-new-student.component.css']
 })

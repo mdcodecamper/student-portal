@@ -5,6 +5,7 @@ import { AuthService } from '../../service/auth.service';
 import { AngularFireAuth } from 'angularfire2/auth';
 import * as firebase from 'firebase';
 import { Observable } from 'rxjs/Observable';
+import { Router } from '@angular/router';
 
 @Component({
     // moduleId: module.id,
@@ -23,7 +24,8 @@ export class NavbarComponent implements OnInit{
     constructor(location: Location,  
                 private element: ElementRef, 
                 private afAuth: AuthService, 
-                private af:AngularFireAuth) {
+                private af:AngularFireAuth, 
+                private route:Router) {
           this.location = location;
           this.sidebarVisible = false;
     
@@ -75,5 +77,7 @@ export class NavbarComponent implements OnInit{
 
     logout(){
         this.afAuth.logout();
+        this.route.navigate(['login']);
+
     }
 }

@@ -8,13 +8,12 @@ declare interface RouteInfo {
     class: string;
 }
 export const ROUTES: RouteInfo[] = [
-    { path: 'dashboard', title: 'Dashboard',  icon: 'pe-7s-graph', class: '' },
-    { path: 'user', title: 'User Profile',  icon:'pe-7s-user', class: '' },
-    { path: 'student-list', title: 'Student List',  icon:'pe-7s-note2', class: '' },
-    { path: 'new-student', title: 'Add New Student',  icon:'pe-7s-user', class: '' },
-    { path: 'icons', title: 'Icons',  icon:'pe-7s-science', class: '' },
-    // { path: 'maps', title: 'Maps',  icon:'pe-7s-map-marker', class: '' },
-    { path: 'notifications', title: 'Notifications',  icon:'pe-7s-bell', class: '' },  
+    { path: 'dashboard',     title: 'Dashboard',          icon: 'pe-7s-graph',    class: '' },
+    { path: 'user',          title: 'User Profile',       icon: 'pe-7s-user',     class: '' },
+    { path: 'student-list',  title: 'Student List',       icon: 'pe-7s-note2',    class: '' },
+    { path: 'new-student',   title: 'Add New Student',    icon: 'pe-7s-user',     class: '' },
+    { path: 'icons',         title: 'Icons',              icon: 'pe-7s-science',  class: '' },
+    { path: 'notifications', title: 'Notifications',      icon: 'pe-7s-bell',     class: '' }  
 ];
 
 @Component({

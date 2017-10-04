@@ -22,9 +22,7 @@ import { UserComponent } from './user/user.component';
 import { StudentListComponent } from './student-list/student-list.component';
 import { AddNewStudentComponent } from './add-new-student/add-new-student.component';
 import { IconsComponent } from './icons/icons.component';
-import { MapsComponent } from './maps/maps.component';
 import { NotificationsComponent } from './notifications/notifications.component';
-import { UpgradeComponent } from './upgrade/upgrade.component';
 import { LoginComponent } from './login/login.component';
 import { environment } from '../environments/environment';
 import { AuthService } from './service/auth.service';
@@ -38,9 +36,7 @@ import { AngularFireAuth } from 'angularfire2/auth';
     StudentListComponent,
     AddNewStudentComponent,
     IconsComponent,
-    MapsComponent,
     NotificationsComponent,
-    UpgradeComponent,
     LoginComponent
 
   ],
