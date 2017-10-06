@@ -2,9 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { LocationStrategy, PlatformLocation, Location } from '@angular/common';
 import { AuthService } from './service/auth.service';
 import { Router } from '@angular/router';
-import { AngularFireAuth } from 'angularfire2/auth';
-import * as firebase from 'firebase';
-import { Observable } from 'rxjs/Observable';
 
 @Component({
   selector: 'app-root',
@@ -12,25 +9,20 @@ import { Observable } from 'rxjs/Observable';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit {
-  user$: Observable<firebase.User>;
 
-  public isLoggedIn: boolean;
 
      constructor(public location: Location,
-                 private auth: AngularFireAuth,
-                 private router: Router) {
-     
-          this.user$ = this.auth.authState;             
-          if(this.user$  == null) {
-            console.log("Not Logged in.");
-            this.router.navigate(['login']);
-            this.isLoggedIn = false;
-          } else {
-            console.log("Successfully Logged in.");
-            this.isLoggedIn = true;
-            this.router.navigate(['dashboard']);
-          }          
-      }
+                 public auth: AuthService,
+                 public router: Router
+                 ) {
+                   auth.user$.subscribe(user => {
+                     if(user){
+                       let returnUrl = localStorage.getItem('returnUrl');
+                       router.navigateByUrl(returnUrl);
+                     }
+                   }); 
+
+                 }
 
     // tslint:disable-next-line:one-line
     ngOnInit(){

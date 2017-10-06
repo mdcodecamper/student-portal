@@ -10,23 +10,26 @@ import { AddNewStudentComponent } from './add-new-student/add-new-student.compon
 import { IconsComponent } from './icons/icons.component';
 import { NotificationsComponent } from './notifications/notifications.component';
 import { LoginComponent } from './login/login.component';
+import { AuthGuardService } from './service/auth-guard.service';
 
-const routes: Routes =[
-    { path: 'dashboard',      component: HomeComponent },
-    { path: 'user',           component: UserComponent },
-    { path: 'student-list',   component: StudentListComponent },
-    { path: 'new-student',    component: AddNewStudentComponent },
-    { path: 'icons',          component: IconsComponent },
-    { path: 'notifications',  component: NotificationsComponent },
-    { path: 'login',          component: LoginComponent},
-    { path: '',          redirectTo: 'dashboard', pathMatch: 'full' }
-];
+// const routes: Routes = [
+    
+// ];
 
 @NgModule({
   imports: [
     CommonModule,
     BrowserModule,
-    RouterModule.forRoot(routes)
+    RouterModule.forRoot([
+      { path: 'dashboard',      component: HomeComponent},
+      { path: 'user',           component: UserComponent, canActivate: [AuthGuardService] },
+      { path: 'student-list',   component: StudentListComponent, canActivate: [AuthGuardService]  },
+      { path: 'new-student',    component: AddNewStudentComponent },
+      { path: 'icons',          component: IconsComponent },
+      { path: 'notifications',  component: NotificationsComponent },
+      { path: 'login',          component: LoginComponent},
+      { path: '',          redirectTo: 'dashboard', pathMatch: 'full' }
+    ])
   ],
   exports: [
   ],

@@ -19,17 +19,13 @@ export class NavbarComponent implements OnInit{
     private toggleButton: any;
     private sidebarVisible: boolean;
 
-    user$: Observable<firebase.User>;
 
     constructor(location: Location,  
                 private element: ElementRef, 
-                private afAuth: AuthService, 
-                private af:AngularFireAuth, 
-                private route:Router) {
+                public auth: AuthService, 
+               ) {
           this.location = location;
           this.sidebarVisible = false;
-    
-          this.user$ = af.authState;
          
     }
 
@@ -75,9 +71,8 @@ export class NavbarComponent implements OnInit{
       return 'Dashboard';
     }
 
-    logout(){
-        this.afAuth.logout();
-        this.route.navigate(['login']);
+    logout() {
+        this.auth.logout();
 
     }
 }
