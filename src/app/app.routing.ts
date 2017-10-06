@@ -11,6 +11,7 @@ import { IconsComponent } from './icons/icons.component';
 import { NotificationsComponent } from './notifications/notifications.component';
 import { LoginComponent } from './login/login.component';
 import { AuthGuardService } from './service/auth-guard.service';
+import { AdminAuthGuardService } from './service/admin-auth-guard.service';
 
 // const routes: Routes = [
     
@@ -21,13 +22,15 @@ import { AuthGuardService } from './service/auth-guard.service';
     CommonModule,
     BrowserModule,
     RouterModule.forRoot([
-      { path: 'dashboard',      component: HomeComponent},
-      { path: 'user',           component: UserComponent, canActivate: [AuthGuardService] },
-      { path: 'student-list',   component: StudentListComponent, canActivate: [AuthGuardService]  },
-      { path: 'new-student',    component: AddNewStudentComponent },
-      { path: 'icons',          component: IconsComponent },
-      { path: 'notifications',  component: NotificationsComponent },
+      { path: 'admin/dashboard',      component: HomeComponent, canActivate: [AuthGuardService, AdminAuthGuardService]},
+      { path: 'admin/user',           component: UserComponent, canActivate: [AuthGuardService, AdminAuthGuardService] },
+      { path: 'admin/student-list',   component: StudentListComponent, canActivate: [AuthGuardService, AdminAuthGuardService]  },
+      { path: 'admin/new-student',    component: AddNewStudentComponent, canActivate: [AuthGuardService, AdminAuthGuardService] },
+      { path: 'icons',          component: IconsComponent, canActivate: [AuthGuardService] },
+      { path: 'notifications',  component: NotificationsComponent, canActivate: [AuthGuardService] },
       { path: 'login',          component: LoginComponent},
+      
+
       { path: '',          redirectTo: 'dashboard', pathMatch: 'full' }
     ])
   ],

@@ -30,6 +30,7 @@ import { StudentDashboardComponent } from './student-components/student-dashboar
 import { StudentProfileComponent } from './student-components/student-profile/student-profile.component';
 import { AuthGuardService } from './service/auth-guard.service';
 import { UserService } from './service/user.service';
+import { AdminAuthGuardService } from './service/admin-auth-guard.service';
 
 @NgModule({
   declarations: [
@@ -61,7 +62,7 @@ import { UserService } from './service/user.service';
     AngularFireDatabaseModule
 
   ],
-  providers: [AuthService, AuthGuardService, UserService],
+  providers: [AuthService, AuthGuardService, UserService, AdminAuthGuardService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
